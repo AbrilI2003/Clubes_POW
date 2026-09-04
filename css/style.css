@@ -17,8 +17,8 @@ header {
 }
 
 header img {
-    width: 120px;
-    height: auto;
+    width: 100%;
+    max-width: 130px;
 }
 
 /* pie de pagina */
@@ -155,9 +155,9 @@ main {
   font-size: 12px;
 }
 
-.link a:hover {
+/*.link a:hover {
   text-decoration: underline;
-}
+}*/
 
 /* seccion de clubes de la home */
 .clubs-section {
@@ -166,31 +166,34 @@ main {
 }
 
 .section-header h2 {
-  font-size: 2rem;
+  font-size: 40px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
   color: #0F2952;
   margin-bottom: 5px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 2px;
 }
 
 .section-header p {
-  color: #666;
+  color: #4f4e4e;
   margin-bottom: 30px;
   font-size: 1rem;
 }
 
 /* grilla de tarjetas */
 .clubs-grid {
+  background: #fff;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 /* tarjeta individual de club */
 .club-card {
-  background: #ffffff;
+  background: linear-gradient(rgba(255, 255, 255, 0.5)), url("../img/fondoTarjetas.png") no-repeat center / cover;
   border-radius: 12px;
   padding: 25px 15px;
   text-decoration: none;
@@ -329,7 +332,8 @@ main {
 
 /* ajuste de la barra lateral */
 .sidebar {
-  width: 240px;
+  width: 100%;
+  max-width: 250px;
   background-color: #f4f6f9;
   border-right: 1px solid #e1e5e8;
   padding: 20px 0;
