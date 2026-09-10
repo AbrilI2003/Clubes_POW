@@ -1,3 +1,10 @@
+/* variables de color reutilizadas en todo el sitio */
+:root {
+  --azul-oscuro: #0F2952;
+  --celeste: #00A3E0;
+  --gris-borde: #e1e5e8;
+}
+
 /* estilos generales de la pagina */
 body {
   font-family: Arial, sans-serif;
@@ -9,7 +16,7 @@ body {
 
 /* encabezado arriba con el logo */
 header {
-  background: #0F2952;
+  background: var(--azul-oscuro);
   color: rgb(250, 248, 248);
   padding: 10px;
   display: flex;
@@ -29,137 +36,17 @@ footer {
   padding: 10px;
 }
 
-/* barra lateral del menu */
-.sidebar {
-  background: #f4f4f4;
-  padding: 15px;
-  width: 200px;
-  min-height: calc(100vh - 100px);
-}
-
+/* layout del contenido con la barra lateral (usado en todas las paginas) */
 .layout {
   display: flex;
   flex: 1;
+  min-height: 100vh;
 }
 
 main {
   flex: 1;
   padding: 20px;
 }
-
-/* contenedor principal de la agenda */
-.match-schedule {
-  width: 100%;
-  max-width: 1000px;
-  margin: 20px auto;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  color: #222;
-}
-
-/* botones de navegacion superior */
-.schedule-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
-}
-
-.nav-btn {
-  background-color: #616b7f;
-  color: #fff;
-  border: none;
-  padding: 4px 10px;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.nav-btn:hover {
-  background-color: #4a5363;
-}
-
-/* barras de categoria / liga */
-.category-title {
-  background-color: #616b7f;
-  color: #fff;
-  font-weight: bold;
-  padding: 4px 8px;
-  margin-top: 10px;
-  font-size: 13px;
-}
-
-/* tabla de partidos */
-.matches-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #f7f9fa;
-}
-
-.matches-table tr {
-  border-bottom: 1px solid #e1e5e8;
-}
-
-.matches-table tr:nth-child(even) {
-  background-color: #edf1f5;
-}
-
-.matches-table td {
-  padding: 6px 8px;
-  vertical-align: middle;
-}
-
-.time {
-  width: 50px;
-  color: #555;
-}
-
-.team-home {
-  text-align: right;
-  font-weight: bold;
-  width: 25%;
-}
-
-.team-away {
-  text-align: left;
-  font-weight: bold;
-  width: 25%;
-}
-
-.team-home img,
-.team-away img {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-  margin: 0 5px;
-}
-
-.score {
-  text-align: center;
-  width: 30px;
-  font-weight: bold;
-}
-
-.referee,
-.stadium {
-  color: #666;
-  font-size: 12px;
-}
-
-.link {
-  text-align: right;
-  width: 50px;
-}
-
-.link a {
-  color: #333;
-  text-decoration: none;
-  font-size: 12px;
-}
-
-/*.link a:hover {
-  text-decoration: underline;
-}*/
 
 /* seccion de clubes de la home */
 .clubs-section {
@@ -170,7 +57,7 @@ main {
 .section-header h2 {
   font-size: 40px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color: #0F2952;
+  color: var(--azul-oscuro);
   margin-bottom: 5px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -199,9 +86,9 @@ main {
   border-radius: 12px;
   padding: 25px 15px;
   text-decoration: none;
-  color: #0F2952;
+  color: var(--azul-oscuro);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  border: 1px solid #e1e5e8;
+  border: 1px solid var(--gris-borde);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -211,7 +98,7 @@ main {
 .club-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
-  border-color: #00A3E0;
+  border-color: var(--celeste);
 }
 
 /* logo del club en la tarjeta */
@@ -240,7 +127,7 @@ main {
 .btn-visit {
   font-size: 0.85rem;
   font-weight: bold;
-  color: #00A3E0;
+  color: var(--celeste);
   background-color: #f0f9ff;
   padding: 6px 14px;
   border-radius: 20px;
@@ -248,7 +135,7 @@ main {
 }
 
 .club-card:hover .btn-visit {
-  background-color: #00A3E0;
+  background-color: var(--celeste);
   color: #ffffff;
 }
 
@@ -264,7 +151,10 @@ main {
   box-shadow: 0 12px 8px rgba(0, 0, 0, 0.08);
 }
 
-.club-hero h1 {
+/* h1 del hero: unifica tamaño, margen y efectos de texto en una sola regla */
+.club-hero-info h1 {
+  margin: 0 0 5px 0;
+  font-size: 1.8rem;
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
   border-bottom: 1px solid white;
   padding-bottom: 8px;
@@ -276,12 +166,7 @@ main {
   object-fit: contain;
   background: #ffffff;
   padding: 8px;
-  border-radius: 60%;
-}
-
-.club-hero-info h1 {
-  margin: 0 0 5px 0;
-  font-size: 1.8rem;
+  border-radius: 50%;
 }
 
 .club-nickname {
@@ -299,7 +184,7 @@ main {
 
 /* colores tematicos de cada club */
 .theme-costa {
-  background: linear-gradient(to left, rgb(255, 255, 255),rgb(254, 0, 2));
+  background: linear-gradient(to left, rgb(255, 255, 255), rgb(254, 0, 2));
   border: 1.5px solid rgb(254, 0, 2);
 }
 
@@ -309,7 +194,8 @@ main {
 }
 
 .theme-picofc {
-  background-color: #1D70B8;
+  background: linear-gradient(to left, rgb(255, 255, 255) 1%, rgb(29, 112, 184) 95%);
+  border: 1px solid rgb(29, 112, 184);
 }
 
 .theme-independiente {
@@ -332,7 +218,7 @@ main {
 
 .info-card {
   background: #f7f9fa;
-  border: 1px solid #e1e5e8;
+  border: 1px solid var(--gris-borde);
   border-radius: 6px;
   padding: 15px;
   text-align: center;
@@ -348,21 +234,15 @@ main {
 .info-card p {
   margin: 0;
   font-weight: bold;
-  color: #0F2952;
+  color: var(--azul-oscuro);
 }
 
-/* layout del contenido con la barra lateral */
-.content-wrapper {
-  display: flex;
-  min-height: 100vh;
-}
-
-/* ajuste de la barra lateral */
+/* barra lateral del menu */
 .sidebar {
   width: 100%;
   max-width: 220px;
   background-color: #f4f6f9;
-  border-right: 1px solid #e1e5e8;
+  border-right: 1px solid var(--gris-borde);
   padding: 20px 0;
 }
 
@@ -376,7 +256,7 @@ main {
 .sidebar a {
   display: block;
   padding: 12px 20px;
-  color: #0f2952;
+  color: var(--azul-oscuro);
   text-decoration: none;
   font-weight: 500;
 }
@@ -385,8 +265,8 @@ main {
 .sidebar a:hover,
 .sidebar a.active {
   background-color: #e2e8f0;
-  color: #00a3e0;
-  border-left: 4px solid #00a3e0;
+  color: var(--celeste);
+  border-left: 4px solid var(--celeste);
 }
 
 /* area de contenido principal */
@@ -410,8 +290,8 @@ main {
 
 .club-section h2 {
   font-size: 1.4rem;
-  color: #0F2952;
+  color: var(--azul-oscuro);
   margin-bottom: 12px;
-  border-bottom: 2px solid #e1e5e8;
+  border-bottom: 2px solid var(--gris-borde);
   padding-bottom: 5px;
 }
