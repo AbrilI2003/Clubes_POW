@@ -1,50 +1,50 @@
 /* estilos generales de la pagina */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* encabezado arriba con el logo */
 header {
-    background: #0F2952;
-    color: rgb(250, 248, 248);
-    padding: 10px;
-    display: flex;
-    align-items: center;
+  background: #0F2952;
+  color: rgb(250, 248, 248);
+  padding: 10px;
+  display: flex;
+  align-items: center;
 }
 
 header img {
-    width: 100%;
-    max-width: 130px;
+  width: 100%;
+  max-width: 130px;
 }
 
 /* pie de pagina */
 footer {
-    background: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 10px;
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
 
 /* barra lateral del menu */
 .sidebar {
-    background: #f4f4f4;
-    padding: 15px;
-    width: 200px;
-    min-height: calc(100vh - 100px);
+  background: #f4f4f4;
+  padding: 15px;
+  width: 200px;
+  min-height: calc(100vh - 100px);
 }
 
 .layout {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
 
 main {
-    flex: 1;
-    padding: 20px;
+  flex: 1;
+  padding: 20px;
 }
 
 /* contenedor principal de la agenda */
@@ -126,7 +126,8 @@ main {
   width: 25%;
 }
 
-.team-home img, .team-away img {
+.team-home img,
+.team-away img {
   width: 20px;
   height: 20px;
   vertical-align: middle;
@@ -139,7 +140,8 @@ main {
   font-weight: bold;
 }
 
-.referee, .stadium {
+.referee,
+.stadium {
   color: #666;
   font-size: 12px;
 }
@@ -167,7 +169,7 @@ main {
 
 .section-header h2 {
   font-size: 40px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: #0F2952;
   margin-bottom: 5px;
   text-transform: uppercase;
@@ -256,9 +258,16 @@ main {
   align-items: center;
   gap: 20px;
   padding: 25px;
-  border-radius: 8px;
+  border-radius: 20px;
   color: #ffffff;
   margin-bottom: 25px;
+  box-shadow: 0 12px 8px rgba(0, 0, 0, 0.08);
+}
+
+.club-hero h1 {
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid white;
+  padding-bottom: 8px;
 }
 
 .club-hero-shield {
@@ -267,7 +276,7 @@ main {
   object-fit: contain;
   background: #ffffff;
   padding: 8px;
-  border-radius: 50%;
+  border-radius: 60%;
 }
 
 .club-hero-info h1 {
@@ -289,11 +298,29 @@ main {
 }
 
 /* colores tematicos de cada club */
-.theme-costa { background-color: #D31A24; }
-.theme-ferro { background-color: #008D45; }
-.theme-picofc { background-color: #1D70B8; }
-.theme-independiente { background-color: #a8131b; }
-.theme-argentino { background-color: #00A3E0; }
+.theme-costa {
+  background: linear-gradient(to left, rgb(255, 255, 255),rgb(254, 0, 2));
+  border: 1.5px solid rgb(254, 0, 2);
+}
+
+.theme-ferro {
+  background: linear-gradient(to right, rgba(0, 101, 25, 0.9), rgba(255, 255, 255, 0.8));
+  border: 1px solid rgb(0, 101, 25);
+}
+
+.theme-picofc {
+  background-color: #1D70B8;
+}
+
+.theme-independiente {
+  background: linear-gradient(to left, rgb(255, 255, 255) 1%, rgb(205, 52, 44) 95%);
+  border: 1.5px solid rgb(205, 52, 44);
+}
+
+.theme-argentino {
+  background: linear-gradient(to left, rgb(255, 255, 255) 1%, rgb(1, 30, 122) 95%);
+  border: 1px solid rgb(1, 30, 122);
+}
 
 /* grilla de ficha tecnica */
 .club-details-grid {
@@ -333,14 +360,15 @@ main {
 /* ajuste de la barra lateral */
 .sidebar {
   width: 100%;
-  max-width: 250px;
+  max-width: 220px;
   background-color: #f4f6f9;
   border-right: 1px solid #e1e5e8;
   padding: 20px 0;
 }
 
 .sidebar ul {
-  list-style: none; /* saca los puntos de la lista */
+  list-style: none;
+  /* saca los puntos de la lista */
   padding: 0;
   margin: 0;
 }
