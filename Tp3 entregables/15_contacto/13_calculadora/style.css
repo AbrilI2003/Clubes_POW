@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===================================================
+   VARIABLES POR TEMA
+   Cambiando estas variables, cambia toda la calculadora
+   =================================================== */
+
+/* Tema por defecto: CLASICA (colores simples, como una calculadora comun) */
+body {
+  --fondo-pagina: #eeeeee;
+  --color-titulo: #111111;
+  --fondo-calc: #eeeeee;
+
+  --pantalla-fondo: #000000;
+  --pantalla-texto: #ffffff;
+  --pantalla-texto-secundario: #cccccc;
+
+  --color-naranja: #ff5500;
+  --color-azul: #1a1aff;
+  --color-rojo: #7a0000;
+  --color-verde: #0a7d0a;
+  --color-texto-btn: #ffffff;
+
+  --borde-pantalla: none;
+
+  background-color: var(--fondo-pagina);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Tema NEON OSCURO */
+body.tema-neon {
+  --fondo-pagina: #0d0d15;
+  --color-titulo: #39ff14;
+  --fondo-calc: #0d0d15;
+
+  --pantalla-fondo: #000000;
+  --pantalla-texto: #39ff14;
+  --pantalla-texto-secundario: #00e5ff;
+
+  --color-naranja: #ff9100;
+  --color-azul: #00e5ff;
+  --color-rojo: #ff2079;
+  --color-verde: #39ff14;
+  --color-texto-btn: #0d0d15;
+
+  --borde-pantalla: 1px solid #39ff14;
+}
+
+h1 {
+  margin-bottom: 15px;
+  color: var(--color-titulo);
+}
+
+/* Selector de tema */
+.selector-tema {
+  margin-bottom: 15px;
+  color: var(--color-titulo);
+  font-size: 14px;
+}
+
+.selector-tema select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #999;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.calculadora {
+  width: 320px;
+  background-color: var(--fondo-calc);
+  padding-bottom: 10px;
+}
+
+.pantalla {
+  background-color: var(--pantalla-fondo);
+  color: var(--pantalla-texto);
+  border: var(--borde-pantalla);
+  border-radius: 4px;
+  padding: 10px 15px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.operacion-anterior {
+  font-size: 16px;
+  color: var(--pantalla-texto-secundario);
+  min-height: 20px;
+}
+
+.pantalla-actual {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.botones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.btn {
+  height: 65px;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-texto-btn);
+  cursor: pointer;
+}
+
+.azul {
+  background-color: var(--color-azul);
+}
+
+.naranja {
+  background-color: var(--color-naranja);
+}
+
+.rojo {
+  background-color: var(--color-rojo);
+}
+
+.verde {
+  background-color: var(--color-verde);
+}
