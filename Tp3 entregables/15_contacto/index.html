@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="icon" type="image/jpeg" href="imagenes/los_magios.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <img src="imagenes/sillon.png" class="imagen-decorativa" style="top: 60px; left: 20px;" alt="Sillón decorativo">
+    <img src="imagenes/tv.png" class="imagen-decorativa" style="top: 400px; right: 30px;" alt="Televisor decorativo">
+    <img src="imagenes/auto.png" class="imagen-decorativa" style="bottom: 40px; left: 60px;" alt="Auto decorativo">
+    <img src="imagenes/cuadro.png" class="imagen-decorativa" style="top: 20px; right: 80px;" alt="Cuadro decorativo">
+
+    <div class="tarjeta">
+
+        <div id="seccion-contacto">
+
+            <div class="header-logo">
+                <img src="imagenes/los_magios.jpg" alt="Logo Los Magios" class="logo">
+                <h1>Los Magios</h1>
+            </div>
+
+            <div class="columnas">
+
+                <div class="columna-datos">
+                    
+                    <h2>Datos</h2>
+                    <p>Sociedad secreta: Los Magios, fundada hace siglos en Springfield</p>
+                    <p>Dirección: Calle 9, al lado del Bar de Moe, Springfield</p>
+                    <p>Teléfono: <a href="tel:02302206670">02302-206670</a></p>
+                    <p>Email: <a href="mailto:losmagios@mail.com">losmagios@mail.com</a></p>
+                    <p>Instagram: <a href="https://www.instagram.com/losmagiosoficiales/" target="_blank">losmagiosoficiales</a></p>
+                </div>
+
+                <div class="columna-form">
+
+                    <h2>¿Te gustaría unirte a Los Magios?</h2>
+                    <p>Dejanos tus datos y en breve un miembro se pondrá en contacto.</p>
+
+
+                    <form id="formulario-contacto">
+                        <label for="nombre">Ingresar Nombre: </label>
+                        <input type="text" id="nombre" placeholder="Homero Simspson">
+
+                        <label for="id_email">Email:</label>
+                        <input type="email" id="id_email" placeholder="homerojs@gmail.com">
+
+                        <label for="direccion">Ingresar Dirección: </label>
+                        <input type="text" id="direccion" placeholder="Calle 10, nro144">
+
+                        <label for="telefono">Ingresar Número de telefono: </label>
+                        <input type="tel" id="telefono" placeholder="02302-206670">
+
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" placeholder="Escribe tu consulta"></textarea>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="seccion-gracias" class="oculto">
+            <h1>¡Gracias!</h1>
+            <p>Lo contactaré en breve.</p>
+            <p id="contador">Calculando...</p>
+            <button id="btn-volver">Volver al curriculum</button>
+            <img src="imagenes/homero_bailando.gif" alt="Homero bailando" class="gif-gracias">
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
